@@ -1,6 +1,48 @@
-<div>
-  <label>Payee Name</label>
-  <input (input)="onNameChange($event)"/>
+<div class="container">
+  <h3>Payment Form</h3>
+  <div class="row">
+    <div class="form-group-col">
+      <label>Payee Name</label>
+      <input class="form-comtrol" (input)="onNameChange($event)" />
+    </div>
+    <div class="col">
+      <label>
+        <b>Name</b>
+      </label>
+      <div>
+        {{name | titlecase }}
+      </div>
+    </div>
+  </div> 
+
+  <div class="row">
+    <div class="form-group-col">
+      <label>Date</label>
+      <input type="date" class="form-comtrol" (input)="noDateChange($event)" />
+    </div>
+    <div class="col">
+      <label>
+        <b>date</b>
+      </label>
+      <div>
+        {{date | date: 'MMMM d, y'}}
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group-col">
+      <label>Miles Name</label>
+      <input class="form-comtrol" (input)="onMilesChange($event)" />
+    </div>
+    <div class="col">
+      <label>
+        <b>Miles</b>
+      </label>
+      <div>
+        {{miles | convert}}
+      </div>
+    </div>
+  </div>
 </div>
 
-{{name | titlecase }}

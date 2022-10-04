@@ -8,10 +8,22 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   name!: string;
+  date!: string;
+  miles!: string;
+
+  onMilesChange(value:any){
+    this.miles = value.target.value;
+  }
 
   onNameChange(values:any){
 
     this.name = values.target.value;
+
+  }
+
+  noDateChange(date:any){
+
+    this.date = date.target.value
 
   }
 
